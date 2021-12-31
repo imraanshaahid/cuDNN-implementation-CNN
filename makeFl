@@ -1,0 +1,7 @@
+all:
+	nvcc -lcuda -lcublas *.cu -o CNN  -Wno-deprecated-gpu-targets
+	gcc data.c data_file.c neural_implementation.c -lm -o data	
+run:
+	./CNN
+clean:
+	rm CNN
